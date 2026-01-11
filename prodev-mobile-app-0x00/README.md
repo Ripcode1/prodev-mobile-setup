@@ -1,310 +1,213 @@
-# Mobile Development with React Native - Complete Project
+# Task 1: Create Your First Mobile App
 
-This repository contains all tasks for the Mobile Development with React Native course using TypeScript, NativeWindCSS, and the Expo Framework.
-
-## 📱 Project Overview
-
-**Course Duration**: January 5, 2026 - January 12, 2026  
-**Weight**: 1  
-**Framework**: React Native with Expo  
-**Language**: TypeScript  
-**Styling**: NativeWindCSS / StyleSheet
-
-## 🎯 Learning Objectives
-
-By completing this project, you will:
-- ✅ Set up a professional mobile development environment
-- ✅ Create cross-platform mobile applications for iOS and Android
-- ✅ Master React Native core components
-- ✅ Implement responsive layouts with Flexbox
-- ✅ Handle images, safe areas, and touchable components
-- ✅ Build production-ready UI screens
-- ✅ Use TypeScript for type-safe mobile development
-
-## 📂 Project Structure
-
-```
-prodev-mobile-setup/
-├── mobile-development-setup/          # Task 0: Environment Setup
-│   └── README.md
-├── prodev-mobile-app-0x00/            # Task 1: First Mobile App
-│   ├── README.md
-│   └── app-example/
-│       ├── app/(tabs)/index.tsx
-│       └── constants/Colors.tsx
-├── prodev-mobile-app-0x01/            # Task 2: Mobile Components & Styling
-│   └── app/index.tsx
-├── prodev-mobile-app-0x02/            # Task 3: Safe Areas, Images, Touchables
-│   └── app/index.tsx
-└── prodev-mobile-app-0x03/            # Task 4: Core Components (Login Screen)
-    ├── app/
-    │   ├── _layout.tsx
-    │   └── index.tsx
-    ├── styles/index.tsx
-    ├── app.json
-    ├── ASSETS_NOTE.md
-    └── README.md
-```
-
-## 📋 Tasks Breakdown
-
-### Task 0: Setting Up and Testing Your Mobile Development Environment ✅
-**Objective**: Install and configure Expo Go on your physical device
-
-**Requirements**:
-- Node.js LTS installed
-- VS Code
-- Expo Go app on physical device (iOS/Android)
-
-**Deliverables**:
-- ✅ Expo Go installed and configured
-- ✅ Account created
-- ✅ Documentation in README.md
+## Objective
+Set up your first mobile application using the Expo Router template and document the scaffolding process.
 
 ---
 
-### Task 1: Create Your First Mobile App ✅
-**Objective**: Scaffold your first Expo app and understand the project structure
+## Steps Followed for Scaffolding
 
-**Steps**:
-1. Initialize Expo project with Router template
-2. Modify home screen text
-3. Run on physical device
-4. Reset project and document observations
-
-**Deliverables**:
-- ✅ Modified `app/(tabs)/index.tsx`
-- ✅ Documentation of reset command effects
-- ✅ Understanding of file structure
-
----
-
-### Task 2: Implementing Mobile Components in React Native ✅
-**Objective**: Learn React Native components and StyleSheet API
-
-**Components Used**:
-- `<View>` - Container component
-- `<Text>` - Text display component
-- `StyleSheet` - Styling API
-
-**Deliverables**:
-- ✅ Styled text components
-- ✅ Custom color scheme
-- ✅ Typography implementation
-
----
-
-### Task 3: Safe Areas, Images, and Touchable Components ✅
-**Objective**: Build a welcome screen with images and interactive elements
-
-**Components Used**:
-- `SafeAreaView` & `SafeAreaProvider`
-- `ImageBackground`
-- `Image`
-- `TouchableOpacity`
-- `Dimensions`
-
-**Features**:
-- ✅ Full-screen background image
-- ✅ Company logo display
-- ✅ Interactive buttons
-- ✅ Safe area handling for notches
-
----
-
-### Task 4: Explore More Core Components ✅
-**Objective**: Build a complete login screen with form elements
-
-**Components Used**:
-- `TextInput` with keyboard types
-- `TouchableOpacity` for buttons
-- `@expo/vector-icons` for icons
-- Custom centralized styling
-
-**Features**:
-- ✅ Email input field
-- ✅ Password input with visibility toggle
-- ✅ Primary and social login buttons
-- ✅ Responsive layout
-- ✅ Navigation elements
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
+### Step 1: Navigate to Project Directory
 ```bash
-# Check Node.js version (v16 or higher)
-node --version
-
-# Install Expo CLI globally (optional)
-npm install -g expo-cli
+cd prodev-mobile-setup
 ```
 
-### Running Each Task
-
-#### Task 1:
+### Step 2: Initialize Expo Project
 ```bash
-cd prodev-mobile-app-0x00
 npx create-expo-app@latest .
+```
+
+**What happened:**
+- Expo CLI created a new React Native project using the latest Expo Router template
+- The project was initialized with TypeScript support
+- A complete file structure was generated including:
+  - `app/` directory for routes and screens
+  - `assets/` directory for images and fonts
+  - `constants/` directory for app-wide constants
+  - Configuration files (`app.json`, `package.json`, `tsconfig.json`)
+
+### Step 3: Modify the Home Screen
+1. Opened `app/(tabs)/index.tsx`
+2. Located the default text "Welcome!"
+3. Changed it to "**First App Created**"
+
+**Code modification:**
+```typescript
+// Before
+<Text>Welcome!</Text>
+
+// After
+<Text>First App Created</Text>
+```
+
+### Step 4: Run and Test Application
+```bash
 npx expo start
 ```
 
-#### Task 2:
+**Testing process:**
+- Started the Expo development server
+- A QR code appeared in the terminal
+- Scanned the QR code using:
+  - **iOS**: Phone's Camera app
+  - **Android**: Expo Go app
+- The app successfully loaded on my physical device
+- The home screen displayed "First App Created" as expected
+
+---
+
+## Observations from `reset-project` Command
+
+### Running the Reset Command
 ```bash
-cd prodev-mobile-app-0x01
-npx create-expo-app@latest .
 npm run reset-project
-# Copy code from app/index.tsx
-npx expo start
 ```
 
-#### Task 3:
-```bash
-cd prodev-mobile-app-0x02
-npx create-expo-app@latest .
-npm run reset-project
-# Add background-image.png and Logo.png to assets/images/
-npx expo start
-```
+### What Happened During Reset
 
-#### Task 4:
-```bash
-cd prodev-mobile-app-0x03
-npx create-expo-app@latest .
-npm run reset-project
-npm install react-native-safe-area-context @expo/vector-icons
-# Add required images to assets/images/
-npx expo start
-```
+When I ran the `npm run reset-project` command, the following changes occurred:
 
-## 📱 Testing on Device
+1. **Removed Example Code**
+   - All boilerplate example screens were deleted
+   - Template components and sample code were removed
+   - The app was stripped down to a minimal starting point
 
-### iOS (iPhone/iPad)
-1. Install Expo Go from App Store
-2. Run `npx expo start`
-3. Scan QR code with Camera app
+2. **Cleaned Up Directory Structure**
+   - The `app/(tabs)/` directory was simplified
+   - Example tabs and navigation components were removed
+   - Only essential files remained
 
-### Android
-1. Install Expo Go from Play Store
-2. Run `npx expo start`
-3. Scan QR code with Expo Go app
+3. **Asset Cleanup**
+   - Example images and icons in `assets/` folder were removed
+   - Default splash screens and placeholders were cleared
+   - Font files from the template were deleted
 
-## 🎨 Key Concepts Learned
+4. **Files That Remained**
+   - Core configuration files (`app.json`, `package.json`, `tsconfig.json`)
+   - Basic app structure
+   - Root layout files
+   - Essential dependencies in `package.json`
 
-### 1. React Native Components
-- **View**: Container component (like `<div>`)
-- **Text**: Text display (like `<p>`)
-- **Image**: Display images
-- **ImageBackground**: Background images
-- **TextInput**: Form inputs
-- **TouchableOpacity**: Touchable buttons
+5. **Script Execution**
+   - The script `scripts/reset-project.js` was executed
+   - It performed a cleanup operation on the project
+   - After completion, I had a clean slate to build my custom app
 
-### 2. Styling
-- StyleSheet.create() for performance
-- Flexbox layouts
-- Responsive design with Dimensions
-- Centralized style management
+### Why Reset is Useful
 
-### 3. Safe Area Context
-- Prevents UI overlap with device notches
-- SafeAreaProvider wraps entire app
-- SafeAreaView for individual screens
+The `reset-project` command is valuable because:
+- **Clean Starting Point**: Removes all template code you don't need
+- **Faster Development**: No need to manually delete example files
+- **Better Understanding**: Forces you to build from scratch, improving learning
+- **Cleaner Git History**: Start with only the code you write
+- **No Template Clutter**: Avoids confusion from unused example components
 
-### 4. Icons & Assets
-- @expo/vector-icons for icon libraries
-- require() for local assets
-- Image optimization
+### Project State After Reset
 
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|------------|---------|
-| React Native | Cross-platform mobile framework |
-| TypeScript | Type-safe JavaScript |
-| Expo | Development tooling & services |
-| Expo Router | File-based navigation |
-| Vector Icons | Icon libraries (FontAwesome, Ionicons) |
-| SafeAreaContext | Device-safe layouts |
-
-## 📚 Resources
-
-- [React Native Documentation](https://reactnative.dev/docs/getting-started)
-- [Expo Documentation](https://docs.expo.dev/)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
-- [React Native Components](https://reactnative.dev/docs/components-and-apis)
-- [Expo Vector Icons](https://icons.expo.fyi/)
-
-## ✅ Submission Checklist
-
-- [ ] All tasks completed on time
-- [ ] Code typed manually (no copy-paste)
-- [ ] All required files present
-- [ ] Apps tested on physical device
-- [ ] README files documented
-- [ ] Screenshots added (optional)
-- [ ] Review link generated
-- [ ] Peer reviews completed
-
-## 🎯 Assessment Criteria
-
-**Hybrid Assessment**:
-- ✅ Manual review by peers
-- ✅ Auto-check for core files
-- ⏰ Timely submission required
-
-**Important**: Generate your review link before the deadline to ensure peer review availability.
-
-## 💡 Best Practices Followed
-
-1. **Manual Typing**: All code typed manually for better retention
-2. **Organized Structure**: Logical folder organization
-3. **Documentation**: Comprehensive README files
-4. **Clean Code**: Proper formatting and naming
-5. **Reusability**: Centralized styles and components
-6. **Type Safety**: TypeScript throughout
-
-## 🐛 Common Issues & Solutions
-
-### Issue: Expo Go not connecting
-**Solution**: Ensure phone and computer are on same network
-
-### Issue: Assets not loading
-**Solution**: Check file paths and names (case-sensitive)
-
-### Issue: SafeAreaView not working
-**Solution**: Wrap with SafeAreaProvider
-
-### Issue: Icons not displaying
-**Solution**: Install @expo/vector-icons
-
-## 📈 Next Steps
-
-After completing these tasks, you're ready to:
-- Implement navigation between screens
-- Add state management (Context API, Redux)
-- Connect to backend APIs
-- Add authentication
-- Implement data persistence
-- Deploy to app stores
-
-## 🤝 Contributing
-
-This is a learning project. Feel free to:
-- Add improvements
-- Fix bugs
-- Enhance documentation
-- Share with peers
-
-## 📝 Notes
-
-- **Course Platform**: ALX Professional Development
-- **Deadline**: January 12, 2026
-- **Status**: All tasks completed ✅
-- **Framework**: Expo SDK (latest)
+After running the reset command:
+- ✅ Configuration files intact
+- ✅ Dependencies still installed
+- ✅ Basic app structure preserved
+- ✅ No example code or components
+- ✅ Ready for custom development from scratch
 
 ---
 
-**Happy Coding!** 🚀✨
+## File Structure Understanding
 
-Made with ❤️ for mobile development learning
+After scaffolding, the project structure looks like this:
+
+```
+prodev-mobile-app-0x00/
+├── app/
+│   ├── (tabs)/
+│   │   ├── index.tsx          # Home screen (modified)
+│   │   ├── explore.tsx         # Second tab
+│   │   └── _layout.tsx         # Tab navigation config
+│   ├── _layout.tsx             # Root layout
+│   └── +not-found.tsx          # 404 page
+├── assets/
+│   ├── images/                 # App images
+│   └── fonts/                  # Custom fonts
+├── constants/
+│   └── Colors.tsx              # Color definitions
+├── components/                 # Reusable components
+├── hooks/                      # Custom React hooks
+├── scripts/
+│   └── reset-project.js        # Reset script
+├── app.json                    # Expo configuration
+├── package.json                # Dependencies
+├── tsconfig.json               # TypeScript config
+└── README.md                   # This file
+```
+
+---
+
+## Key Learnings
+
+1. **Expo Router**: Uses file-based routing (similar to Next.js)
+2. **TypeScript**: Built-in TypeScript support for type safety
+3. **Tab Navigation**: The `(tabs)` folder creates tab-based navigation
+4. **Hot Reload**: Changes appear instantly on the device
+5. **Cross-Platform**: Single codebase works on iOS and Android
+
+---
+
+## Technologies Used
+
+- **React Native**: Cross-platform mobile framework
+- **TypeScript**: Type-safe JavaScript
+- **Expo**: Development platform and tooling
+- **Expo Router**: File-based navigation
+- **Expo Go**: Mobile app for testing
+
+---
+
+## Running the Application
+
+```bash
+# Start development server
+npx expo start
+
+# Start with cache cleared
+npx expo start -c
+
+# Run on iOS simulator (macOS only)
+npx expo start --ios
+
+# Run on Android emulator
+npx expo start --android
+```
+
+---
+
+## Troubleshooting
+
+### QR Code Won't Scan
+- Ensure phone and computer are on the same WiFi network
+- Try running `npx expo start --tunnel`
+
+### Metro Bundler Issues
+- Run `npx expo start -c` to clear cache
+- Delete `node_modules/` and run `npm install` again
+
+### TypeScript Errors
+- Ensure `npm install` has been run
+- Check that all dependencies are installed
+
+---
+
+## Next Steps
+
+After completing this task:
+- ✅ Understand Expo project structure
+- ✅ Know how to modify React Native screens
+- ✅ Can run apps on physical devices
+- ✅ Ready to learn React Native components and styling
+
+---
+
+**Status**: ✅ Completed  
+**Date**: January 2026  
+**Repository**: prodev-mobile-setup  
+**Directory**: prodev-mobile-app-0x00
